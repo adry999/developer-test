@@ -5,7 +5,12 @@
   <body>
     <script>
         function setup() {
-          // Write your code here.
+          const buttons = document.getElementsByClassName("remove");
+          for (let i=0; i<=buttons.length; i++) {
+            buttons[i].addEventListener('click', function(e) {
+              e.target.parentElement.remove();
+            });
+          }
         }
 
         // Example case. 
@@ -23,6 +28,8 @@
 
         document.getElementsByClassName("remove")[0].click();
         console.log(document.body.innerHTML);
+
+        
     </script>
   </body>
 </html>
